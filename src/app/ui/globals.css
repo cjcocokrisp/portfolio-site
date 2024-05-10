@@ -1,24 +1,50 @@
+@media screen and (max-height: 584px) {
+    :root {
+        --hero-height: 91vh;
+    }
+}
+
+@media screen and (min-height: 585px) {
+    :root {
+        --hero-height: 96vh;
+    }
+}
+
 :root {
     --text-red: #F42121;
     --title-red: #e03e3e;
     --img-stroke: #C54D4D;
     --hero-white: #DCDCDC;
+    --grey-text: #414141;
 }
 
 body {
     background: linear-gradient(#353434, #0F0F0F);
     background-size: cover;
     width: 98vw;
-    height: 100vh;
+    height: 100%;
 }
 
 body::-webkit-scrollbar {
     display: none;
 }
 
+a:link {
+    text-decoration: inherit;
+    color: inherit;
+}
+
+a:visited {
+    text-decoration: inherit;
+    color: inherit;
+}
+
 .nav {
     display: flex;
     justify-content: space-between;
+    position: sticky;
+    top: 8px;
+    z-index: 1;
 }
 
 .nav-links {
@@ -35,7 +61,6 @@ body::-webkit-scrollbar {
 .resume-button {
     background-color: #00000000;
     color: var(--hero-white);
-    border: 1px solid var(--text-red);
     font-size: 13px;
     border-radius: 5px;
     width: 81px;
@@ -46,7 +71,7 @@ body::-webkit-scrollbar {
 .hero {
     display: flex;
     justify-content: space-between;
-    height: 91vh;
+    height: var(--hero-height);
     padding-left: 25px;
     padding-right: 25px;
     gap: 10px;
@@ -58,8 +83,8 @@ body::-webkit-scrollbar {
 }   
 
 @keyframes hero-bounce {
-    from { height: 91vh }
-    to { height: 82vh }
+    from { height: var(--hero-height) }
+    to { height: 87vh }
 }
 
 .hero-info {
@@ -144,4 +169,113 @@ body::-webkit-scrollbar {
 
 .hero-img {
     border-radius: 50%;
+}
+
+.experience {
+    position: relative;
+    left: -8px;
+    width: 102%;
+    height: 100vh;
+    background: linear-gradient(var(--text-red), var(--img-stroke));
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    opacity: 0px;
+}
+
+.experience-items {
+    height: 75vh;
+    display: flex;
+}
+
+.experience-lines {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    margin-right: 100px;
+}
+
+.experience-lines-item {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+
+.experience-lines-text {
+    font-size: 13px;
+    padding-left: 3px;
+}
+
+.experience-line {
+    border-bottom: 2px solid var(--hero-white);
+    width: 18vh;
+    height: 0;
+    margin-top: 0px;
+    align-self: flex-start;
+}
+
+.experience-line-circle {
+    position: relative;
+    top: -1.6vh;
+    width: 3.5vh;
+    height: 3.5vh;
+    background-color: var(--hero-white);
+    border-radius: 3.5vh;
+}
+
+.experience-line-circle:hover {
+    background-color: var(--grey-text);
+}
+
+.experience-line-circle-animation {
+    animation-name: experience-selected-flash;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes experience-selected-flash {
+    from { background-color: var(--hero-white); }
+    to { background-color: var(--grey-text); }
+}
+
+.experience-text {
+    margin-top: 3vh;
+    width: 65vh;
+    margin-right: 20vh;
+}
+
+.experience-title {
+    font-size: 36px;
+    color: white;
+    font-weight: bold;
+    margin-bottom: 3vh;
+}
+
+.experience-job-info {
+    font-size: 20px;
+    color: #3f3636;
+    font-weight: bold;
+}
+
+.experience-list {
+    padding-left: 0;
+}
+
+.experience-bullets {
+    font-size: 15px;
+    color: var(--hero-white);
+    list-style-type: "- ";
+}
+
+.experience-photos {
+    align-self: center;
+    border-radius: 1.5vh;
+    display: flex;
+    flex-wrap: wrap;
+    width: 400px;
+    padding: 30px;
+    gap: 25px;
+    justify-content: center;
 }

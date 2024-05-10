@@ -1,5 +1,7 @@
 //import type { Metadata } from "next";
+import Link from "next/link";
 import Image from "next/image";
+import { useEffect, useState } from "react";
 import { Inter } from "next/font/google";
 import { sourceCodePro } from "./ui/fonts";
 import "./ui/globals.css";
@@ -25,25 +27,31 @@ export default function RootLayout({
     <head>
         <link rel="icon" href="images/favicon.ico" />
     </head>
-    <body>
-        <div className={`${sourceCodePro.className} nav`}>
-            <Image
-                src="/headerlogo.png"
-                width={54}
-                height={44}
-                className="header-logo"
-                alt="Site logo"
-            />
+        <body>
+            {children}
+        </body>
+    </html>
+  );
+}
+
+/*
+<div className={`${sourceCodePro.className} nav`}>
+            <Link href={'/'}>
+                <Image
+                    src="/headerlogo.png"
+                    width={54}
+                    height={44}
+                    className="header-logo"
+                    alt="Site logo"
+                    
+                />
+            </Link>
             <div className="nav-links">
-                <p style={{color: "white"}}><b style={{color: "var(--text-red)"}}>01.</b> About</p>
-                <p style={{color: "white"}}><b style={{color: "var(--text-red)"}}>02.</b> Experience</p>
+                <p style={{color: "white"}}><b style={{color: "var(--text-red)"}}>01.</b> <a href="/">About</a></p>
+                <p style={{color: "white"}}><b style={{color: "var(--text-red)"}}>02.</b> <a href="/#experience">Experience</a></p>
                 <p style={{color: "white"}}><b style={{color: "var(--text-red)"}}>03.</b> Projects</p>
                 <p style={{color: "white"}}><b style={{color: "var(--text-red)"}}>04.</b> Contact</p>
                 <button className={`resume-button ${sourceCodePro.className}`}>Resume</button>
             </div>
         </div>
-        {children}
-        </body>
-    </html>
-  );
-}
+*/

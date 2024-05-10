@@ -1,12 +1,30 @@
+'use client'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub, faLinkedin, faInstagram } from "@fortawesome/free-brands-svg-icons";
+import { useEffect, useState } from "react";
 import { sourceCodePro } from "./ui/fonts";
 import { sourceSans } from "./ui/fonts";
 import Image from "next/image";
+import NavBar from "@/components/NavBar";
+import Experience from "@/components/Experience";
+import loadWorkData from "./actions";
 
 export default function Home() {
+    const [data, setData] = useState(null);
+    const [isLoading, setLoading] = useState(true);
+
+    useEffect(() => {
+        loadWorkData().then((res) => { 
+            setData(res)
+            setLoading(false);
+        });
+    }, [])
+
+    if (!data || isLoading) return <p style={{height: "100vh"}}></p>;
+
     return (
         <main>
+            <NavBar alt={false} dynamic={true} />
             <div className="hero">
                 <div className="hero-info" style={{alignSelf: "flex-end"}}>
                     <a href="https://www.github.com/cjcocokrisp">
@@ -21,7 +39,7 @@ export default function Home() {
                     <div className="hero-line"></div>
                 </div>
                 <div className="hero-text" style={{alignSelf: "center"}}>
-                    <p className={`${sourceCodePro.className} hero-text-name`}>Christopher Coco</p>
+                    <p className={`${sourceCodePro.className} hero-text-name`}>Chirstopher Coco</p>
                     <p className={`${sourceCodePro.className} hero-text-title`}>Software Engineer</p>
                     <p className={`${sourceSans.className} hero-text-info`}>I’m an aspiring software engineer based in Massachusetts that is currently studying Computer Science at the University of Massachusetts Lowell. I’m interested in Cloud Technology, Automation, and Game Development.</p>
                 </div>
@@ -38,6 +56,9 @@ export default function Home() {
                     <p className={`${sourceCodePro.className} hero-email`}>chriscoco1205@gmail.com</p>
                     <div className="hero-line"></div>
                 </div>
+            </div>
+            <div className="experience" id="experience">
+                <Experience data={data}/>
             </div>
         </main>
     );
