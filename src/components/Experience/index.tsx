@@ -2,10 +2,23 @@
 import { sourceSans, sourceCodePro } from "@/app/ui/fonts";
 import Image from "next/image";
 import { useState } from "react";
-import ExperienceLine from "./ExperienceLine";
 
 export default function Experience(props: any) {
     const [current, setCurrent] = useState("0");
+
+    // inRange function is exclusive to max and inclusive to min
+    function inRange(num: any, max: any, min: any) {
+        return num >= min && num < max;
+    }
+
+    function calcImgReduce() {
+        let x = 0;
+        if(globalThis.innerWidth >= 1536) x = 500;
+        else if (inRange(globalThis.innerWidth, 1536, 1024)) x = 400;
+        else if (inRange(globalThis.innerWidth, 1024, 640)) x = 200;
+        else if (inRange(globalThis.innerWidth, 640, 475)) x = 100;
+        return x;
+    }
 
     function getWorkExperiences() {
         return Object.entries(props.data);
@@ -17,14 +30,19 @@ export default function Experience(props: any) {
     }
 
     function reduceImgSize(width: any, height: any) {
-        while (width > 400) {
+        let reduceWidth = 0, reduceHeight = 0;
+
+        reduceWidth = calcImgReduce();
+
+        while (width > reduceWidth) {
             width /= 2;
             height /= 2;
         }
-        while (height > 400) {
-            width /= 2;
-            height /= 2;
-        }
+        // TODO: Figure out height scaling!
+        // while (height > reduceHeight) {
+        //     width /= 2;
+        //     height /= 2;
+        // }
         return [width, height];
     }
 
@@ -61,7 +79,7 @@ export default function Experience(props: any) {
                     }
                 </ul>
             </div>
-            <div className="experience-photos" style={{background: `linear-gradient(${props.data[current]["background_colors"][0]}, ${props.data[current]["background_colors"][1]})`}}>
+            <div className="experience-photos" style={{background: `linear-gradient(${props.data[current]["background_colors"][0]}, ${props.data[current]["background_colors"][1]})`, width: `${calcImgReduce()}px`}}>
                 {
                     props.data[current]["imgs"].map((img: any) => {
                         let size = reduceImgSize(img[1], img[2])

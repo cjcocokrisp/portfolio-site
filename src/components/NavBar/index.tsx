@@ -29,7 +29,7 @@ const NavBar = (props: any) => {
     }, [isAlt])
 
     return (
-        <div className={`${sourceCodePro.className} nav`}>
+        <div className={`${sourceCodePro.className} nav container`}>
             <a href={'/'}>
                 <Image
                     src={determineLogo(isAlt)}
@@ -40,7 +40,7 @@ const NavBar = (props: any) => {
                 />
             </a>
             <div className="nav-links">
-                <p style={{color: "white"}}><b style={{color: determineColor(isAlt)}}>01.</b> <a href="/">About</a></p>
+                <p style={{color: "white"}}><b style={{color: determineColor(isAlt)}}>01.</b> <a href="/#about">About</a></p>
                 <p style={{color: "white"}}><b style={{color: determineColor(isAlt)}}>02.</b> <a href="/#experience">Experience</a></p>
                 <p style={{color: "white"}}><b style={{color: determineColor(isAlt)}}>03.</b> Projects</p>
                 <p style={{color: "white"}}><b style={{color: determineColor(isAlt)}}>04.</b> Contact</p>
