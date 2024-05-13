@@ -11,8 +11,8 @@
                  "Worked with a National Instruments Data Acquisition Device and electronics to develop an attachment to detect if the device is fighting with the user through feedback from a pressure sensor."
         ],
         "imgs": [
-            ["pearl.png", 518, 128],
-            ["myopro.png", 1500, 1000]
+            ["pearl.png", 518, 128, "PeARL Lab Logo"],
+            ["myopro.png", 1500, 1000, "Myopro 2 Device"]
         ],
         "background_colors": ["#2640a3", "#262E8C"]
     },
@@ -27,7 +27,7 @@
                  "Other work for the city included, planning and helping run local recreation programs and mathematics tutoring."
         ],
         "imgs": [
-                  ["cityofeverett.png", 587, 587]
+                  ["cityofeverett.png", 587, 587, "City of Everett Logo"]
         ],
         "background_colors": ["#46822C", "#3E7327"] 
     }

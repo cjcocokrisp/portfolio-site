@@ -1,22 +1,38 @@
 "use client";
 import { sourceSans, sourceCodePro } from "@/app/ui/fonts";
 import Image from "next/image";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 export default function Experience(props: any) {
     const [current, setCurrent] = useState("0");
+    const [screenWidth, setScreenWidth] = useState(globalThis.innerWidth);
 
     // inRange function is exclusive to max and inclusive to min
     function inRange(num: any, max: any, min: any) {
         return num >= min && num < max;
     }
 
+    useEffect(() => {
+        globalThis.onresize = () => { setScreenWidth(globalThis.innerWidth) };
+    }, [screenWidth]);
+
     function calcImgReduce() {
         let x = 0;
         if(globalThis.innerWidth >= 1536) x = 500;
-        else if (inRange(globalThis.innerWidth, 1536, 1024)) x = 400;
-        else if (inRange(globalThis.innerWidth, 1024, 640)) x = 200;
-        else if (inRange(globalThis.innerWidth, 640, 475)) x = 100;
+        else if (inRange(globalThis.innerWidth, 1536, 1100)) x = 400;
+        else if (inRange(globalThis.innerWidth, 1100, 950)) x = 300;
+        else if (inRange(globalThis.innerWidth, 950, 500)) x = 200;
+        else x = 100
+        return x;
+    }
+
+    function calcFontReduce() {
+        let x = 0;
+        if(globalThis.innerWidth >= 1536) x = 16;
+        else if (inRange(globalThis.innerWidth, 1536, 1100)) x = 14;
+        else if (inRange(globalThis.innerWidth, 1100, 950)) x = 12;
+        else if (inRange(globalThis.innerWidth, 950, 500)) x = 8;
+        else x = 6;
         return x;
     }
 
@@ -47,7 +63,7 @@ export default function Experience(props: any) {
     }
 
     return (
-        <div className="experience-items">
+        <div className="experience-items" style={{fontSize: `${calcFontReduce()}px`}}>
             <div className="experience-lines">
                 {
                     getWorkExperiences().map((exp: any) => {
@@ -67,30 +83,32 @@ export default function Experience(props: any) {
                     })
                 }
             </div>
-            <div className={`${sourceSans.className} experience-text`}>
-                <div className={`${sourceSans.className} experience-title`}>Work Experience</div>
-                <div className={`${sourceSans.className} experience-job-info`}>{props.data[current]["company_name"]}</div>
-                <div className={`${sourceSans.className} experience-job-info`}>{props.data[current]["title"]}</div>
-                <ul className="experience-list">
+            <div className="experience-job-details">
+                <div className={`${sourceSans.className} experience-text`}>
+                    <div className={`${sourceSans.className} experience-title`}>Work Experience</div>
+                    <div className={`${sourceSans.className} experience-job-info`}>{props.data[current]["company_name"]}</div>
+                    <div className={`${sourceSans.className} experience-job-info`}>{props.data[current]["title"]}</div>
+                    <ul className="experience-list">
+                        {
+                            props.data[current]["text"].map((text: any) => {
+                                return <li className={`${sourceSans.className} experience-bullets`}>{text}</li>
+                            })
+                        }
+                    </ul>
+                </div>
+                <div className="experience-photos" style={{background: `linear-gradient(${props.data[current]["background_colors"][0]}, ${props.data[current]["background_colors"][1]})`, width: `${calcImgReduce()}px`}}>
                     {
-                        props.data[current]["text"].map((text: any) => {
-                            return <li className={`${sourceSans.className} experience-bullets`}>{text}</li>
-                        })
+                        props.data[current]["imgs"].map((img: any) => {
+                            let size = reduceImgSize(img[1], img[2])
+                            return <Image
+                            src={"/" + img[0]}
+                            width={size[0]}
+                            height={size[1]}
+                            alt={img[3]}
+                        />
+                        }) 
                     }
-                </ul>
-            </div>
-            <div className="experience-photos" style={{background: `linear-gradient(${props.data[current]["background_colors"][0]}, ${props.data[current]["background_colors"][1]})`, width: `${calcImgReduce()}px`}}>
-                {
-                    props.data[current]["imgs"].map((img: any) => {
-                        let size = reduceImgSize(img[1], img[2])
-                        return <Image
-                        src={"/" + img[0]}
-                        width={size[0]}
-                        height={size[1]}
-                        alt="Peral Logo"
-                    />
-                    }) 
-                }
+                </div>
             </div>
         </div>
       );

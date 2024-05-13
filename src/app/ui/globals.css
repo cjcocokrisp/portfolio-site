@@ -255,7 +255,7 @@ a:visited {
 }
 
 .experience-line {
-    border-bottom: 2px solid var(--hero-white);
+    border-bottom: 0.125em solid var(--hero-white);
     width: 16vh;
     height: 0;
     margin-top: 0px;
@@ -264,11 +264,11 @@ a:visited {
 
 .experience-line-circle {
     position: relative;
-    top: -1.6vh;
-    width: 3vh;
-    height: 3vh;
+    top: -0.65em;
+    width: 1.5em;
+    height: 1.5em;
     background-color: var(--hero-white);
-    border-radius: 3vh;
+    border-radius: 1.5em;
 }
 
 .experience-line-circle:hover {
@@ -290,8 +290,7 @@ a:visited {
 
 .experience-text {
     margin-top: 3vh;
-    width: 65vh;
-    margin-right: 20vh;
+    width: 40.625em;
 }
 
 .experience-title {
@@ -325,4 +324,10 @@ a:visited {
     padding: 1.875em;
     gap: 1.563em;
     justify-content: center;
+}
+
+.experience-job-details {
+    display: flex;
+    width: 70vw;
+    justify-content: space-between;
 }
