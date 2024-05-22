@@ -7,21 +7,28 @@ import { sourceSans } from "./ui/fonts";
 import Image from "next/image";
 import NavBar from "@/components/NavBar";
 import Experience from "@/components/Experience";
-import loadWorkData from "./actions";
+import { loadWorkData, loadProjectData } from "./actions";
+import Projects from "@/components/Projects";
 
 export default function Home() {
-    const [data, setData] = useState(null);
+    const [workData, setWorkData] = useState(null);
+    const [projectData, setProjectData] = useState(null);
     const [isLoading, setLoading] = useState(true);
 
     useEffect(() => {
         loadWorkData().then((res) => { 
-            setData(res)
+            setWorkData(res);
             setLoading(false);
         });
+        loadProjectData().then((res) => {
+            setProjectData(res);
+            setLoading(false);
+        });
+        
     }, [])
-
-    if (!data || isLoading) return <p style={{height: "100vh"}}></p>;
-
+    
+    if (!workData || !projectData || isLoading) return <p style={{height: "100vh"}}></p>;
+    
     return (
         <main>
             <div id="about"/>
@@ -59,7 +66,10 @@ export default function Home() {
                 </div>
             </div>
             <div className="container" id="experience">
-                <Experience data={data}/>
+                <Experience data={workData}/>
+            </div>
+            <div className="container" id="projects">
+                <Projects data={projectData}/>
             </div>
         </main>
     );

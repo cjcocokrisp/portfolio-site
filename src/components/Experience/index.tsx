@@ -15,7 +15,16 @@ export default function Experience(props: any) {
     useEffect(() => {
         globalThis.onresize = () => { setScreenWidth(globalThis.innerWidth) };
     }, [screenWidth]);
+    
+    function getWorkExperiences() {
+        return Object.entries(props.data);
+    }
 
+    function handleClick(position: any) {
+        let pos = position;
+        return () => { setCurrent(pos); }
+    }
+    
     function calcImgReduce() {
         let x = 0;
         if(globalThis.innerWidth >= 1536) x = 500;
@@ -36,14 +45,6 @@ export default function Experience(props: any) {
         return x;
     }
 
-    function getWorkExperiences() {
-        return Object.entries(props.data);
-    }
-
-    function handleClick(position: any) {
-        let pos = position;
-        return () => { setCurrent(pos); }
-    }
 
     function reduceImgSize(width: any, height: any) {
         let reduceWidth = 0, reduceHeight = 0;

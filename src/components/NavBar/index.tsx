@@ -42,8 +42,9 @@ const NavBar = (props: any) => {
             <div className="nav-links">
                 <p style={{color: "white"}}><b style={{color: determineColor(isAlt)}}>01.</b> <a href="/#about">About</a></p>
                 <p style={{color: "white"}}><b style={{color: determineColor(isAlt)}}>02.</b> <a href="/#experience">Experience</a></p>
-                <p style={{color: "white"}}><b style={{color: determineColor(isAlt)}}>03.</b> Projects</p>
-                <p style={{color: "white"}}><b style={{color: determineColor(isAlt)}}>04.</b> Contact</p>
+                <p style={{color: "white"}}><b style={{color: determineColor(isAlt)}}>03.</b> <a href="/#projects">Projects</a></p>
+                <p style={{color: "white"}}><b style={{color: determineColor(isAlt)}}>04.</b> <a href="/#blog">Blog</a></p>
+                <p style={{color: "white"}}><b style={{color: determineColor(isAlt)}}>05.</b> <a href="/#contact">Contact</a></p>
                 <button style={{border: `1px solid ${determineColor(isAlt)}`}}className={`resume-button ${sourceCodePro.className}`}>Resume</button>
             </div>
         </div>
