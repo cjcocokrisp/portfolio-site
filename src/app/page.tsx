@@ -71,6 +71,23 @@ export default function Home() {
             <div className="container" id="projects">
                 <Projects data={projectData}/>
             </div>
+            <div className="container blog-contact">
+                <div id="blog">
+                    <div className={`${sourceSans.className} blog-title`}>Blog</div>
+                    <div className="blog-content">
+                        <div className={`${sourceSans.className} blog-text`}>If you’re interested in what I’m working on, learning, and more check out my blog!</div>
+                        <button className={`${sourceSans.className} blog-button`}>To Blog</button>
+                    </div>
+                </div>
+                <div id="contact">
+                    <div className={`${sourceSans.className} contact-title`}>Contact</div>
+                    <div className={`${sourceSans.className} contact-text`}>Want to get in touch?</div>
+                    <div className={`${sourceCodePro.className} contact-content`}>
+                        <div className={`contact-linkedin`}><a href="https://www.linkedin.com/in/christopher-coco-jr/">Connect with me on <FontAwesomeIcon icon={faLinkedin} className="contact-icon" /></a></div>
+                        <div className="contact-email">Email me at <em>chriscoco1205@gmail.com</em></div>
+                    </div>
+                </div>
+            </div>
         </main>
     );
 }
