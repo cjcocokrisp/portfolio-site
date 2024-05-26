@@ -49,19 +49,19 @@ export default function Projects(props: any) {
         let reduceWidth = 0, reduceHeight = 0; 
 
         if(globalThis.innerWidth >= 1151) {
-            reduceWidth = 528; 
-            reduceHeight = 320; 
+            reduceWidth = 440; 
+            reduceHeight = 232; 
         }
         else if (inRange(globalThis.innerWidth, 1151, 950)) {
-            reduceWidth = 485; 
-            reduceHeight = 277; 
+            reduceWidth = 420; 
+            reduceHeight = 212; 
         }
         else if (inRange(globalThis.innerWidth, 935, 500)) {
-            reduceWidth = 445; 
-            reduceHeight = 237; 
+            reduceWidth = 400; 
+            reduceHeight = 192; 
         }
         else {
-            reduceWidth = 250; 
+            reduceWidth = 300; 
             reduceHeight = 130; 
         }
 
@@ -90,7 +90,7 @@ export default function Projects(props: any) {
                     })
                 }
             </div>
-            <p className={`${sourceSans.className} projects-title`}>{globalThis.innerWidth}</p>
+            <p className={`${sourceSans.className} projects-title`}>Projects</p>
             <div className="projects-info">
                 <div className={`${sourceCodePro.className} projects-info-hover-text`}>{previewTitle}</div>
                 <div className="projects-info-circles">
