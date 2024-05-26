@@ -7,6 +7,15 @@ export default function Projects(props: any) {
     const [previewTitle, setPreviewTitle] = useState(null);
     const [yearPos, setYearPos] = useState("0");
     const [projectPos, setProjectPos] = useState("0");
+    const [screenWidth, setScreenWidth] = useState(globalThis.innerWidth);
+
+    useEffect(() => {
+        globalThis.onresize = () => { setScreenWidth(globalThis.innerWidth) };
+    }, [screenWidth]);
+
+    function inRange(num: any, max: any, min: any) {
+        return num >= min && num < max;
+    }
 
     function getYears() {
         return Object.entries(props.data);
@@ -36,6 +45,30 @@ export default function Projects(props: any) {
         return () => { setPreviewTitle(text); }
     }
 
+    function reduceImgSize(width: any, height: any) {
+        let reduceWidth = 0, reduceHeight = 0; 
+
+        if(globalThis.innerWidth >= 1151) {
+            reduceWidth = 528; 
+            reduceHeight = 320; 
+        }
+        else if (inRange(globalThis.innerWidth, 1151, 950)) {
+            reduceWidth = 485; 
+            reduceHeight = 277; 
+        }
+        else if (inRange(globalThis.innerWidth, 935, 500)) {
+            reduceWidth = 445; 
+            reduceHeight = 237; 
+        }
+        else {
+            reduceWidth = 250; 
+            reduceHeight = 130; 
+        }
+
+        return [reduceWidth, reduceHeight];
+    }
+
+    let imgSize = reduceImgSize(528, 320);
     return (
         <div className="projects-items">
             <div className="experience-lines project">
@@ -57,7 +90,7 @@ export default function Projects(props: any) {
                     })
                 }
             </div>
-            <p className={`${sourceSans.className} projects-title`}>Projects</p>
+            <p className={`${sourceSans.className} projects-title`}>{globalThis.innerWidth}</p>
             <div className="projects-info">
                 <div className={`${sourceCodePro.className} projects-info-hover-text`}>{previewTitle}</div>
                 <div className="projects-info-circles">
@@ -75,7 +108,7 @@ export default function Projects(props: any) {
                     <ul className="projects-list">
                         {
                             props.data[yearPos]["projects"][projectPos]["text"].map((text: any) => {
-                                return <li className={`${sourceSans.className} experience-bullets project`}>{text}</li>
+                                return <li className={`${sourceSans.className} experience-bullets`}>{text}</li>
                             })
                         }
                     </ul>
@@ -84,8 +117,8 @@ export default function Projects(props: any) {
                         <div className={`${sourceCodePro.className} projects-info-box-title projects-repo`} style={{"fontSize": "1.2rem"}}><a href={props.data[yearPos]["projects"][projectPos]["repo"]}>Repository</a></div>
                         <Image
                             src={"/" + props.data[yearPos]["projects"][projectPos]["img"]}
-                            width={528}
-                            height={320}
+                            width={imgSize[0]}
+                            height={imgSize[1]}
                             alt={props.data[yearPos]["projects"][projectPos]["name"] + " Image"}
                         />
                     </div>

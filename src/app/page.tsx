@@ -9,6 +9,7 @@ import NavBar from "@/components/NavBar";
 import Experience from "@/components/Experience";
 import { loadWorkData, loadProjectData } from "./actions";
 import Projects from "@/components/Projects";
+import Footer from "@/components/Footer";
 
 export default function Home() {
     const [workData, setWorkData] = useState(null);
@@ -56,6 +57,10 @@ export default function Home() {
                         src="/hero-img.jpg"
                         width={290}
                         height={290}
+                        style={{
+                            width: "18.125rem",
+                            height: "18.125rem"
+                        }}
                         className="hero-img"
                         alt="Hero image"
                     />
@@ -71,7 +76,7 @@ export default function Home() {
             <div className="container" id="projects">
                 <Projects data={projectData}/>
             </div>
-            <div className="container blog-contact">
+            <div className="container blog-contact" id="blog-contact">
                 <div id="blog">
                     <div className={`${sourceSans.className} blog-title`}>Blog</div>
                     <div className="blog-content">
@@ -88,6 +93,7 @@ export default function Home() {
                     </div>
                 </div>
             </div>
+            <Footer/>
         </main>
     );
 }

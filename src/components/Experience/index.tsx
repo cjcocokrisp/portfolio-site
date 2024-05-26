@@ -35,17 +35,6 @@ export default function Experience(props: any) {
         return x;
     }
 
-    function calcFontReduce() {
-        let x = 0;
-        if(globalThis.innerWidth >= 1536) x = 16;
-        else if (inRange(globalThis.innerWidth, 1536, 1100)) x = 14;
-        else if (inRange(globalThis.innerWidth, 1100, 950)) x = 12;
-        else if (inRange(globalThis.innerWidth, 950, 500)) x = 8;
-        else x = 6;
-        return x;
-    }
-
-
     function reduceImgSize(width: any, height: any) {
         let reduceWidth = 0, reduceHeight = 0;
 
@@ -55,16 +44,11 @@ export default function Experience(props: any) {
             width /= 2;
             height /= 2;
         }
-        // TODO: Figure out height scaling!
-        // while (height > reduceHeight) {
-        //     width /= 2;
-        //     height /= 2;
-        // }
         return [width, height];
     }
 
     return (
-        <div className="experience-items" style={{fontSize: `${calcFontReduce()}px`}}>
+        <div className="experience-items">
             <div className="experience-lines">
                 {
                     getWorkExperiences().map((exp: any) => {

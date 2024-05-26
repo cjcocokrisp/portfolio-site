@@ -7,6 +7,7 @@ import { sourceCodePro } from "./ui/fonts";
 import "./ui/globals.css";
 import { config } from '@fortawesome/fontawesome-svg-core'
 import '@fortawesome/fontawesome-svg-core/styles.css'
+import NavBar from "@/components/NavBar";
 
 config.autoAddCss = false
 
