@@ -61,8 +61,8 @@ export default function Projects(props: any) {
             reduceHeight = 192; 
         }
         else {
-            reduceWidth = 300; 
-            reduceHeight = 130; 
+            reduceWidth = 200; 
+            reduceHeight = 92; 
         }
 
         return [reduceWidth, reduceHeight];

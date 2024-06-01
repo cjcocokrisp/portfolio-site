@@ -80,9 +80,9 @@
 
 body {
     background-image: linear-gradient(#353434, #0F0F0F);
-    height: 100vh;
     margin: 0;
     padding: 0;
+    height: 100vh;
 }
 
 body::-webkit-scrollbar {
@@ -147,6 +147,12 @@ a:visited {
     display: flex;
     flex-direction: column;
     gap: 10px;
+    align-self: flex-end;
+}
+
+.hero-info.right {
+    align-self: flex-end;
+    margin-right: 0.125rem;
 }
 
 .hero-icon {
@@ -227,6 +233,8 @@ a:visited {
 
 .hero-img {
     border-radius: 50%;
+    width: 18.125rem;
+    height: 18.125rem;
 }
 
 #experience {
@@ -596,4 +604,202 @@ a:visited {
     font-size: 1.1rem;
     display: flex;
     gap: 1vw;
+}
+
+@media (max-width: 414px) {
+    body {
+        height: 125vh;
+        width: 100vw;
+    }
+
+    .navbar-mobile-bars {
+        font-size: 4rem;
+        align-self: center;
+    }
+
+    .navbar-mobile-x {
+        font-size: 3rem;
+        align-self: flex-end;
+    }
+
+    .navbar-mobile {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .hero {
+        flex-direction: column;
+    }
+
+    .hero-info {
+        flex-direction: row;
+        align-self: flex-start;
+    }
+    
+    .hero-icon {
+        margin-top: 12px;
+        align-self: center;
+        font-size: 2.2rem;
+    }
+
+    .hero-info.left {
+        margin-top: 3vh;
+        flex-direction: row-reverse;
+    }
+
+    .hero-info.right {
+        margin-bottom: 12vh;
+        align-items: flex-end;
+    }
+
+    .hero-text {
+        margin-top: 0;
+        position: relative;
+        top: -10px;
+    }
+
+    .hero-line {
+        border-left: 0px;
+        border-top: 1px solid var(--hero-white);
+        width: 15vw;
+        height: 0;
+    }
+
+    .hero-email {
+        writing-mode: unset;
+        margin-top: 12px;
+        font-size: 1.2rem;
+    }
+
+    .hero-img {
+        width: 15rem;
+        height: 15rem;
+    }
+
+    .hero-img-container {
+        width: 15rem;
+        height: 15rem;
+    }
+
+    .hero-text-title,
+    .hero-text-name {
+        font-size: 2.55rem;
+        text-align: center;
+    }
+
+    .hero-text-info {
+        font-size: 1.3rem;
+        text-align: center;
+    }
+
+    @keyframes typing {
+        from {width: 0}
+        to {width: 100%}
+    }
+
+    #experience {
+        height: 110vh;
+    }
+
+    .experience-items {
+        flex-direction: column;
+        align-items: center;
+        width: 100vw;
+        height: 85vh;
+    }
+
+    .experience-lines {
+        align-self: flex-start;
+    }
+
+    .experience-lines-text {
+        top: -50px;
+
+    }
+
+    .experience-job-details {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .experience-title {
+        margin-bottom: 1vh;
+        font-size: 2rem;
+    }
+
+    .experience-job-info {
+        font-size: 1.2rem;
+    }
+
+    .experience-line {
+        width: 18vw;
+    }
+    
+    .experience-list {
+        width: 80vw;
+    }
+
+    .experience-bullets {
+        font-size: 1.3rem;
+    }
+
+    .experience-line-circle {
+        width: 2.5rem;
+        height: 2.5rem;
+        border-radius: 4rem;
+        top: -1.2rem;
+    }
+
+    #projects {
+        height: 150vh;
+        justify-content: flex-start;
+    }
+
+    .projects-items {
+        flex-direction: column;
+        height: 70vh;
+        justify-content: center;
+    }
+    
+    .experience-line.project {
+        width: 18vw;
+    }
+
+    .projects-title {
+        align-self: center;
+    }
+
+    .projects-info {
+        align-self: center;
+    }
+
+    .projects-box {
+        flex-direction: column;
+        width: 35rem;
+        height: 40rem;
+        align-self: center;
+    }
+
+    .projects-list {
+        width: 90vw;
+    }
+
+    .projects-info-box-format {
+        align-self: center;
+    }
+    
+    .projects-info-circles {
+        gap: 2.2vw;
+    }
+
+    .projects-info-circle {
+        width: 3rem;
+        height: 3rem;
+        border-radius: 3rem;
+    }
+
+    .blog-button {
+        width: 30vw;
+    }
+
 }

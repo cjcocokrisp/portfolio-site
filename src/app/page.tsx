@@ -35,7 +35,7 @@ export default function Home() {
             <div id="about"/>
             <NavBar alt={false} dynamic={true}/>
             <div className="hero container">
-                <div className="hero-info" style={{alignSelf: "flex-end"}}>
+                <div className="hero-info left">
                     <a href="https://www.github.com/cjcocokrisp">
                         <FontAwesomeIcon icon={faGithub} className="hero-icon" />
                     </a>
@@ -57,15 +57,11 @@ export default function Home() {
                         src="/hero-img.jpg"
                         width={290}
                         height={290}
-                        style={{
-                            width: "18.125rem",
-                            height: "18.125rem"
-                        }}
                         className="hero-img"
                         alt="Hero image"
                     />
                 </div>
-                <div className="hero-info" style={{alignSelf: "flex-end", marginRight: "0.125rem"}}>
+                <div className="hero-info right">
                     <p className={`${sourceCodePro.className} hero-email`}>chriscoco1205@gmail.com</p>
                     <div className="hero-line"></div>
                 </div>

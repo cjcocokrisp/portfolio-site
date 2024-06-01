@@ -31,7 +31,7 @@ export default function Experience(props: any) {
         else if (inRange(globalThis.innerWidth, 1536, 1100)) x = 400;
         else if (inRange(globalThis.innerWidth, 1100, 950)) x = 300;
         else if (inRange(globalThis.innerWidth, 950, 500)) x = 200;
-        else x = 100
+        else x = 115;
         return x;
     }
 
