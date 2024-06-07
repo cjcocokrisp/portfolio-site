@@ -17,17 +17,20 @@ function determineLogo(state: boolean) {
 const NavBar = (props: any) => {
     const [isAlt, setisAlt] = useState(props.alt);
     const [navSelected, setNavSelected] = useState(false);
+    const [width, setWidth] = useState(0);
 
-    const onScroll = () => {
-        if (Math.floor((globalThis.scrollY + 24) / globalThis.innerHeight) % 2 != 0) {
-            setisAlt(true);
-        } else {
-            setisAlt(false);
-        }
-    }
-
+    
     useEffect(() => {
+        const onScroll = () => {
+            if (Math.floor((globalThis.scrollY + 24) / globalThis.innerHeight) % 2 != 0) {
+                setisAlt(true);
+            } else {
+                setisAlt(false);
+            }
+        }
         if (props.dynamic) document.addEventListener("scroll", onScroll);
+
+        setWidth(globalThis.innerWidth)
     }, [isAlt])
 
     function handleClick() {
@@ -35,13 +38,13 @@ const NavBar = (props: any) => {
     }
 
     function determineContent() {
-        if (globalThis.innerWidth > 414) {
+        if (width > 414) {
             return (
                 <div className="nav-links">
                     <p style={{color: "white"}}><b style={{color: determineColor(isAlt)}}>01.</b> <a href="/#about">About</a></p>
                     <p style={{color: "white"}}><b style={{color: determineColor(isAlt)}}>02.</b> <a href="/#experience">Experience</a></p>
                     <p style={{color: "white"}}><b style={{color: determineColor(isAlt)}}>03.</b> <a href="/#projects">Projects</a></p>
-                    <p style={{color: "white"}}><b style={{color: determineColor(isAlt)}}>04.</b> <a href="/#blog-contact">Blog</a></p>
+                    <p style={{color: "white"}}><b style={{color: determineColor(isAlt)}}>04.</b> <a href="/blog">Blog</a></p>
                     <p style={{color: "white"}}><b style={{color: determineColor(isAlt)}}>05.</b> <a href="/#blog-contact">Contact</a></p>
                     <button style={{border: `1px solid ${determineColor(isAlt)}`}}className={`resume-button ${sourceCodePro.className}`}>Resume</button>
                 </div>

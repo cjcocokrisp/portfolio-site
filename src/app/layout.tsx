@@ -26,6 +26,7 @@ export default function RootLayout({
   return (
     <html lang="en">
     <head>
+        <title>cjcocokrisp.dev</title>
         <link rel="icon" href="images/favicon.ico" />
     </head>
         <body>

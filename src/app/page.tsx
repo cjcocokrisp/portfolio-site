@@ -77,7 +77,7 @@ export default function Home() {
                     <div className={`${sourceSans.className} blog-title`}>Blog</div>
                     <div className="blog-content">
                         <div className={`${sourceSans.className} blog-text`}>If you’re interested in what I’m working on, learning, and more check out my blog!</div>
-                        <button className={`${sourceSans.className} blog-button`}>To Blog</button>
+                        <a href="/blog"><button className={`${sourceSans.className} blog-button`}>To Blog</button></a>
                     </div>
                 </div>
                 <div id="contact">

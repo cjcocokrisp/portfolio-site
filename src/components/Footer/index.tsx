@@ -5,8 +5,19 @@ import { faGithub, faLinkedin, faInstagram } from "@fortawesome/free-brands-svg-
 
 
 export default function Footer(props: any) {
+    let type = "linear-gradient(#353434, #0F0F0F)";
+    switch (props.type) {
+    case "alt":
+        type = "linear-gradient(var(--title-red), var(--img-stroke)";
+        break;
+    case "transparent":
+        type = "rgba(0,0,0,0)";
+        break;
+        //  linear-gradient(#353434, #0F0F0F
+    }
+
     return (
-        <div className={`${sourceCodePro.className} footer container`}>
+        <div className={`${sourceCodePro.className} footer container`} style={{background: type}}>
             <div className="footer-icons">
                 <a href="https://www.github.com/cjcocokrisp">
                     <FontAwesomeIcon icon={faGithub} className="footer-icon"/>

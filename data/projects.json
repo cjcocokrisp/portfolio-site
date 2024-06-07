@@ -6,7 +6,7 @@
                 "name": "Portfolio Website",
                 "text": [
                     "Developed a portfolio website to host information about myself and career.",
-                    "Hosts A Blog where to discuss programming as projects, learning, and more.",
+                    "Displays most recent Medium blog posts by pulling data from Medium's RSS Feed and then displays it to the user to read on the site.",
                     "Built using Next.JS and vanilla CSS."
                 ],
                 "img": "portfoliosite.png", 

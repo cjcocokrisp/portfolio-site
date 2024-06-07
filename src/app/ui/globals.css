@@ -127,6 +127,10 @@ a:visited {
     margin-top: 8.5px;
 }
 
+.resume-button:hover {
+    background-image: linear-gradient(var(--title-red), var(--img-stroke));
+}
+
 .hero {
     display: flex;
     justify-content: space-between;
@@ -158,6 +162,10 @@ a:visited {
 .hero-icon {
     color: var(--hero-white);
     font-size: 1.438rem;
+}
+
+.hero-icon:hover {
+    color: #969494;
 }
 
 .hero-line {
@@ -590,7 +598,6 @@ a:visited {
 .footer {
     height: 8vh;
     max-width: 100vw;
-    background-image: linear-gradient(#353434, #0F0F0F);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -604,6 +611,103 @@ a:visited {
     font-size: 1.1rem;
     display: flex;
     gap: 1vw;
+}
+
+.footer-icon:hover {
+    color: #969494;
+}
+
+.blog-title {
+    font-size: 2rem;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+}
+
+.blog-notice {
+    font-size: 1.3rem;
+    color:white;
+}
+
+.blog-notice:hover {
+    color: var(--hero-white)
+}
+
+.blog-articles {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.article-card {
+    display: flex;
+    gap: 5rem;
+    color: white;
+    justify-content: space-evenly;
+    width: 100vw;
+    padding-left: 2rem;
+    font-size: 1.3rem;
+}
+
+.article-card-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.1rem;
+}
+
+.article-card-info:hover {
+    color: var(--hero-white)
+}
+
+.article-title:hover {
+    color: var(--hero-white);
+}
+
+.article-card-description {
+    font-size: 0.9rem;
+    width: 40vw;
+}
+
+.display-article-title,
+.display-article-date {
+    color: white;
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+.display-article-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    font-size: 1.2rem;
+    width: 80vw;
+}
+
+.display-article-content figure {
+    text-align: center;
+}
+
+.display-article-content img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.display-article-back {
+    margin-bottom: 1rem;
+    background-color: #00000000;
+    border: 1px var(--text-red) solid;
+    border-radius: 5px;
+    color: white;
+    font-size: 1rem;
+    padding-left: 0.7rem;
+    padding-right: 0.7rem;
+    padding-top: 0.2rem;
+    padding-bottom: 0.2rem;
+}
+
+.display-article-back:hover {
+    background-image: linear-gradient(var(--title-red), var(--img-stroke));;
 }
 
 @media (max-width: 414px) {
