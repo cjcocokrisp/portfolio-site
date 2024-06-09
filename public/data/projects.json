@@ -1,4 +1,4 @@
-export const projectData: object = {
+{
     "0": {
         "year": "2024",
         "projects": {

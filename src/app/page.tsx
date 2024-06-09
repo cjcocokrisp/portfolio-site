@@ -7,13 +7,26 @@ import { sourceSans } from "./ui/fonts";
 import Image from "next/image";
 import NavBar from "@/components/NavBar";
 import Experience from "@/components/Experience";
+import { loadWorkData, loadProjectData } from "./actions";
 import Projects from "@/components/Projects";
 import Footer from "@/components/Footer";
-import { projectData } from "./data/projectData";
-import { workData } from "./data/workData";
 
 export default function Home() {
-    const [isLoading, setLoading] = useState(false);
+    const [workData, setWorkData] = useState(null);
+    const [projectData, setProjectData] = useState(null);
+    const [isLoading, setLoading] = useState(true);
+
+    useEffect(() => {
+        loadWorkData().then((res) => { 
+            setWorkData(res);
+            setLoading(false);
+        });
+        loadProjectData().then((res) => {
+            setProjectData(res);
+            setLoading(false);
+        });
+        
+    }, [])
     
     if (!workData || !projectData || isLoading) return <p style={{height: "100vh"}}></p>;
     

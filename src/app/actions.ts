@@ -2,7 +2,7 @@
 import { promises as fs } from 'fs';
 
 export async function loadWorkData() {
-    const workFile = await fs.readFile(process.cwd() + '/data/work.json', 'utf8');
+    const workFile = await fs.readFile(process.cwd() + '/data/work.json', 'utf-8');
     const workData = JSON.parse(workFile);
     return workData;
 }
