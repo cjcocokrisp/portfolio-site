@@ -5,8 +5,9 @@ import NavBar from "@/components/NavBar";
 import Footer from "@/components/Footer";
 import { useRouter, useSearchParams } from "next/navigation";
 import DOMPurify from "dompurify";
+import { Suspense } from "react";
 
-export default function Home() {
+function Article() {
     const router = useRouter();
     const title = useSearchParams().get("title");
     const date = useSearchParams().get("date");
@@ -20,7 +21,7 @@ export default function Home() {
     }
     
     return (
-        <main style={{backgroundImage: "linear-gradient(#353434, #0F0F0F)"}}>
+        <div>
             <NavBar/>
             <div style={{display: 'flex', flexDirection: 'column', alignItems: 'center', marginBottom: '0', gap: '0.01rem'}}>
                 <div className={`${sourceCodePro.className} display-article-title`}>{title}</div>
@@ -30,6 +31,16 @@ export default function Home() {
                 <button className={`${sourceCodePro.className} display-article-back`} onClick={() => router.back()}>Return</button>
             </div>
             <Footer type="transparent"/>
-        </main>
+        </div>
     );
+}
+
+export default function ArticleView(props: any) {
+    return (
+        <main style={{backgroundImage: "linear-gradient(#353434, #0F0F0F)"}}>
+            <Suspense>
+                <Article/>
+            </Suspense>
+        </main>
+    )
 }

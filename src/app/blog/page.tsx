@@ -5,7 +5,7 @@ import NavBar from "@/components/NavBar";
 import Footer from "@/components/Footer";
 import MediumCard from "@/components/MediumCard";
 
-export default function Home() {
+export default function Blog() {
     const [blogData, setBlogData] = useState([]);
     const [isLoading, setLoading] = useState(true);
 
