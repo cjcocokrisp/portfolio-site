@@ -7,14 +7,15 @@ export default function Experience(props: any) {
     const [current, setCurrent] = useState("0");
     const [screenWidth, setScreenWidth] = useState(globalThis.innerWidth);
 
+    
+    useEffect(() => {
+        globalThis.onresize = () => { setScreenWidth(globalThis.innerWidth) };
+        }, [screenWidth]);
+        
     // inRange function is exclusive to max and inclusive to min
     function inRange(num: any, max: any, min: any) {
         return num >= min && num < max;
     }
-
-    useEffect(() => {
-        globalThis.onresize = () => { setScreenWidth(globalThis.innerWidth) };
-    }, [screenWidth]);
     
     function getWorkExperiences() {
         return Object.entries(props.data);
@@ -81,7 +82,7 @@ export default function Experience(props: any) {
                         }
                     </ul>
                 </div>
-                <div className="experience-photos" style={{background: `linear-gradient(${props.data[current]["background_colors"][0]}, ${props.data[current]["background_colors"][1]})`, width: `${calcImgReduce()}px`}}>
+                <div className="experience-photos" style={{width: `${calcImgReduce()}px`}}>
                     {
                         props.data[current]["imgs"].map((img: any) => {
                             let size = reduceImgSize(img[1], img[2])
