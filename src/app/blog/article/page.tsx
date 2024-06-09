@@ -1,6 +1,4 @@
 'use client'
-
-import { useEffect, useState } from "react";
 import { sourceCodePro } from "../../ui/fonts";
 import { sourceSans } from "../../ui/fonts";
 import NavBar from "@/components/NavBar";

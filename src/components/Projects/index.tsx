@@ -49,20 +49,16 @@ export default function Projects(props: any) {
         let reduceWidth = 0, reduceHeight = 0; 
 
         if(globalThis.innerWidth >= 1151) {
-            reduceWidth = 440; 
-            reduceHeight = 232; 
+            reduceWidth = 420; 
         }
         else if (inRange(globalThis.innerWidth, 1151, 950)) {
-            reduceWidth = 420; 
-            reduceHeight = 212; 
+            reduceWidth = 400; 
         }
         else if (inRange(globalThis.innerWidth, 935, 500)) {
-            reduceWidth = 400; 
-            reduceHeight = 192; 
+            reduceWidth = 300; 
         }
         else {
             reduceWidth = 200; 
-            reduceHeight = 92; 
         }
 
         return [reduceWidth, reduceHeight];
@@ -79,7 +75,7 @@ export default function Projects(props: any) {
                             type += " animation";
                         }
                         return (
-                            <div>
+                            <div key={year}>
                                 <div className={`${sourceCodePro.className} experience-lines-text project`}>{year["1"]["year"]}</div>
                                 <div style={{display: 'flex'}}>
                                     <div className={"experience-line project"}/>
@@ -100,7 +96,7 @@ export default function Projects(props: any) {
                             if (project["0"] == projectPos) {
                                 type += " animation";
                             }
-                            return <div className={type} onClick={handleProjectClick(project["0"])} onMouseEnter={handleProjectHover(project["1"]["name"])} onMouseLeave={() => {return setPreviewTitle(null); }} />
+                            return <div key={project} className={type} onClick={handleProjectClick(project["0"])} onMouseEnter={handleProjectHover(project["1"]["name"])} onMouseLeave={() => {return setPreviewTitle(null); }} />
                         })
                     }
                 </div>
@@ -108,7 +104,7 @@ export default function Projects(props: any) {
                     <ul className="projects-list">
                         {
                             props.data[yearPos]["projects"][projectPos]["text"].map((text: any) => {
-                                return <li className={`${sourceSans.className} experience-bullets`}>{text}</li>
+                                return <li key={text} className={`${sourceSans.className} experience-bullets`}>{text}</li>
                             })
                         }
                     </ul>
@@ -120,6 +116,7 @@ export default function Projects(props: any) {
                             width={imgSize[0]}
                             height={imgSize[1]}
                             alt={props.data[yearPos]["projects"][projectPos]["name"] + " Image"}
+                            style={{height: "auto"}}
                         />
                     </div>
                 </div>

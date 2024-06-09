@@ -57,7 +57,7 @@ export default function Experience(props: any) {
                             type += " experience-line-circle-animation"
                         }
                         return (
-                            <div>
+                            <div key={exp}>
                                 <div className={`${sourceCodePro.className} experience-lines-text`}>{exp["1"]["start_year"]} - {exp["1"]["end_year"]}</div>
                                 <div style={{display: 'flex'}}>
                                     <div className={"experience-line"}/>
@@ -76,7 +76,7 @@ export default function Experience(props: any) {
                     <ul className="experience-list">
                         {
                             props.data[current]["text"].map((text: any) => {
-                                return <li className={`${sourceSans.className} experience-bullets`}>{text}</li>
+                                return <li key={text} className={`${sourceSans.className} experience-bullets`}>{text}</li>
                             })
                         }
                     </ul>
@@ -90,6 +90,8 @@ export default function Experience(props: any) {
                             width={size[0]}
                             height={size[1]}
                             alt={img[3]}
+                            style={{width: "auto", height: "auto"}}
+                            key={img[3]}
                         />
                         }) 
                     }

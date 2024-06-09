@@ -59,6 +59,7 @@ export default function Home() {
                         height={290}
                         className="hero-img"
                         alt="Hero image"
+                        priority={false}
                     />
                 </div>
                 <div className="hero-info right">

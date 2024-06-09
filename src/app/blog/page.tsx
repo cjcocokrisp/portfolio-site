@@ -1,5 +1,4 @@
 'use client'
-
 import { useEffect, useState } from "react";
 import { sourceSans } from "../ui/fonts";
 import NavBar from "@/components/NavBar";
@@ -27,7 +26,7 @@ export default function Home() {
             <div className="container blog-articles" style={{minHeight: "86vh"}}>
                 <p className={`${sourceSans.className} blog-title`}>Most Recent Blog Articles</p>
                 {blogData.map((article) => (
-                    <MediumCard article={article}/>
+                    <MediumCard key={article} article={article}/>
                 ))}
                 <p className={`${sourceSans.className} blog-notice`}><a href="https://medium.com/@cjcocokrisp">To view all articles click here to be redirected to my Medium profile!</a></p>
             </div>

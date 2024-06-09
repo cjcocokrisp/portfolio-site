@@ -3,7 +3,6 @@ import { sourceCodePro } from "@/app/ui/fonts";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub, faLinkedin, faInstagram } from "@fortawesome/free-brands-svg-icons";
 
-
 export default function Footer(props: any) {
     let type = "linear-gradient(#353434, #0F0F0F)";
     switch (props.type) {
