@@ -10,25 +10,28 @@ import Experience from "@/components/Experience";
 import { loadWorkData, loadProjectData } from "./actions";
 import Projects from "@/components/Projects";
 import Footer from "@/components/Footer";
+import projectData from "./data/projectData";
+import workData from "./data/workData";
 
 export default function Home() {
-    const [workData, setWorkData] = useState(null);
-    const [projectData, setProjectData] = useState(null);
+    // const [workData, setWorkData] = useState(null);
+    // const [projectData, setProjectData] = useState(null);
     const [isLoading, setLoading] = useState(true);
 
     useEffect(() => {
-        loadWorkData().then((res) => { 
-            setWorkData(res);
-            setLoading(false);
-        });
-        loadProjectData().then((res) => {
-            setProjectData(res);
-            setLoading(false);
-        });
+        setLoading(false);
+        // loadWorkData().then((res) => { 
+        //     setWorkData(res);
+        //     setLoading(false);
+        // });
+        // loadProjectData().then((res) => {
+        //     setProjectData(res);
+        //     setLoading(false);
+        // });
         
-    }, [])
+    }, [isLoading])
     
-    if (!workData || !projectData || isLoading) return <p style={{height: "100vh"}}></p>;
+    if (isLoading) return <p style={{height: "100vh"}}></p>;
     
     return (
         <main>
