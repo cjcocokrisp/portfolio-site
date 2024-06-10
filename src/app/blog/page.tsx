@@ -10,7 +10,7 @@ export default function Blog() {
     const [isLoading, setLoading] = useState(true);
 
     useEffect(() => {  
-        fetch("https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@cjcocokrisp")
+        fetch("https://api.rss2json.com/v1/api.json?rss_url=https://www.medium.com/feed/@cjcocokrisp")
         .then(res => res.json())
         .then(data => {
             setBlogData(data.items);

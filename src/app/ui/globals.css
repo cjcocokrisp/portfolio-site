@@ -692,6 +692,10 @@ a:visited {
     max-height: 100%;
 }
 
+.display-article-content pre {
+    font-size: 0.8rem;
+}
+
 .display-article-back {
     margin-bottom: 1rem;
     background-color: #00000000;
