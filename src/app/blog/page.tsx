@@ -4,13 +4,21 @@ import { sourceSans } from "../ui/fonts";
 import NavBar from "@/components/NavBar";
 import Footer from "@/components/Footer";
 import MediumCard from "@/components/MediumCard";
+import getAPIKey from "../data/getAPIKey";
 
 export default function Blog() {
     const [blogData, setBlogData] = useState([]);
     const [isLoading, setLoading] = useState(true);
+    const [apiKey, setAPIKey] = useState("");
 
     useEffect(() => {  
-        fetch("https://api.rss2json.com/v1/api.json?rss_url=https://www.medium.com/feed/@cjcocokrisp")
+        getAPIKey().then(res => {
+            if (res == undefined) {
+                res = "";
+            }
+            setAPIKey(res);
+        });
+        fetch(`https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fwww.medium.com%2Ffeed%2F%40cjcocokrisp&api_key=${apiKey}`)
         .then(res => res.json())
         .then(data => {
             setBlogData(data.items);
