@@ -1,6 +1,6 @@
 'use client'
 import { useEffect, useState } from "react";
-import { sourceSans } from "../ui/fonts";
+import { sourceCodePro, sourceSans } from "../ui/fonts";
 import NavBar from "@/components/NavBar";
 import Footer from "@/components/Footer";
 import MediumCard from "@/components/MediumCard";
@@ -26,7 +26,8 @@ export default function Blog() {
         })
     }, [])
     
-    if (blogData.length == 0 || isLoading) return <p style={{height: "100vh"}}></p>;
+    if (isLoading) return <p style={{height: "100vh"}}></p>;
+    else if (blogData == undefined || blogData.length == 0) return <p className={`${sourceCodePro.className}`} style={{height: "100vh", display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'white'}}>There was an error with the Medium RSS feed. Please try again later.</p>
 
     return (
         <main style={{backgroundImage: "linear-gradient(#353434, #0F0F0F)"}}>
