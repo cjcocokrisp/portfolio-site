@@ -57,7 +57,7 @@ export default function Home() {
                 </div>
                 <div className="hero-img-container" style={{alignSelf: "center"}}>
                     <Image
-                        src="/hero-img.jpg"
+                        src="/hero-img.png"
                         width={290}
                         height={290}
                         className="hero-img"
