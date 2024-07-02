@@ -18,7 +18,7 @@ export default function Blog() {
             }
             setAPIKey(res);
         });
-        fetch(`https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fmedium.com%2Ffeed%2F%40cjcocokrisp&api_key=${apiKey}`)
+        fetch(`https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fwww.medium.com%2Ffeed%2F%40cjcocokrisp&api_key=${apiKey}`)
         .then(res => res.json())
         .then(data => {
             setBlogData(data.items);
