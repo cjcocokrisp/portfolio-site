@@ -9,21 +9,20 @@ import getAPIKey from "../data/getAPIKey";
 export default function Blog() {
     const [blogData, setBlogData] = useState([]);
     const [isLoading, setLoading] = useState(true);
-    const [apiKey, setAPIKey] = useState("");
 
     useEffect(() => {  
         getAPIKey().then(res => {
             if (res == undefined) {
                 res = "";
             }
-            setAPIKey(res);
+            console.log(res);
+            fetch(`https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fwww.medium.com%2Ffeed%2F%40cjcocokrisp&api_key=${res}`)
+            .then(res => res.json())
+            .then(data => {
+                setBlogData(data.items);
+                setLoading(false);
+            })
         });
-        fetch(`https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fmedium.com%2Ffeed%2F%40cjcocokrisp&api_key=${apiKey}`)
-        .then(res => res.json())
-        .then(data => {
-            setBlogData(data.items);
-            setLoading(false);
-        })
     }, [])
     
     if (isLoading) return <p style={{height: "100vh"}}></p>;

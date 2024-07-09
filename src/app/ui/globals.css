@@ -725,6 +725,36 @@ a:visited {
     color: var(--hero-white);
 }
 
+.history-details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color:white
+}
+
+
+.history-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white;
+}
+
+.version-card {
+    display: flex;
+    align-items: center;
+    width: 65vw;
+    justify-content: space-between;
+}
+
+.version-title {
+    font-size: 1.2rem;
+}
+
+.version-card li {
+    font-size: 0.9rem;
+    width: 45vw;
+}
+
 @media (max-width: 414px) {
     body {
         height: 125vh;
