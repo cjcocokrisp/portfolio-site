@@ -51,7 +51,7 @@ export default function Home() {
                     <div className="hero-line"></div>
                 </div>
                 <div className="hero-text" style={{alignSelf: "center"}}>
-                    <p className={`${sourceCodePro.className} hero-text-name`}>Chirstopher Coco</p>
+                    <p className={`${sourceCodePro.className} hero-text-name`}>Christopher Coco</p>
                     <p className={`${sourceCodePro.className} hero-text-title`}>Software Engineer</p>
                     <p className={`${sourceSans.className} hero-text-info`}>I’m an aspiring software engineer based in Massachusetts that is currently studying Computer Science at the University of Massachusetts Lowell. I’m interested in Cloud Technology, Automation, and Game Development.</p>
                 </div>
