@@ -15,7 +15,6 @@ export default function Blog() {
             if (res == undefined) {
                 res = "";
             }
-            console.log(res);
             fetch(`https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fwww.medium.com%2Ffeed%2F%40cjcocokrisp&api_key=${res}`)
             .then(res => res.json())
             .then(data => {
