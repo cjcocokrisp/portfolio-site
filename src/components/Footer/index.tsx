@@ -28,7 +28,7 @@ export default function Footer(props: any) {
                     <FontAwesomeIcon icon={faInstagram} className="footer-icon"/>
                 </a>
             </div>
-            <div className="footer-text">Christopher Coco Jr. | Copyright All Rights Reserved | <a href="/version-history">v1.1.0</a></div>
+            <div className="footer-text">Christopher Coco Jr. | Copyright All Rights Reserved | <a href="/version-history">v1.1.1</a></div>
         </div>
       );
 }

@@ -24,7 +24,7 @@ export default function Blog() {
         });
     }, [])
     
-    if (isLoading) return <p style={{height: "100vh"}}></p>;
+    if (isLoading) return <p style={{height: "100dvh"}}></p>;
     else if (blogData == undefined || blogData.length == 0) return <p className={`${sourceCodePro.className}`} style={{height: "100vh", display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'white'}}>There was an error with the Medium RSS feed. Please try again later.</p>
 
     return (
