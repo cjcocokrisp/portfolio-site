@@ -11,6 +11,7 @@ export default function Blog() {
     const [isLoading, setLoading] = useState(true);
 
     useEffect(() => {  
+        window.scroll(0, 0);
         getAPIKey().then(res => {
             if (res == undefined) {
                 res = "";
