@@ -3,6 +3,17 @@ const projectData = {
         "year": "2024",
         "projects": {
             "0" : {
+                "name": "Gup Rankings",
+                "text": [
+                    "Developed a Risk of Rain 2 mod that adds an In-Game Leaderboard system to the game to allow players to know how they are doing and add a competitive aspect to runs.",
+                    "Synced the host and the clients to display the information about players statistics to allow for comparison in real time.",
+                    "Published the mod on the Thunderstore to allow other players to easily access it and used Github Actions to help automate releases.",
+                    "Risk of Rain 2 was developed in Unity so the mode was developed in C#."
+                ],
+                "img": "guprankings.png", 
+                "repo": "https://github.com/cjcocokrisp/GupRankings"
+            },
+            "1" : {
                 "name": "Portfolio Website",
                 "text": [
                     "Developed a portfolio website to host information about myself and career.",
