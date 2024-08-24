@@ -3,17 +3,28 @@ const projectData = {
         "year": "2024",
         "projects": {
             "0" : {
+                "name": "Attendance Bot",
+                "text": [
+                    "Developed a Discord Attendance Bot as an AWS Lambda function to be used by the UML Cloud Computing Club at their meetings to track and get statistics of their events.",
+                    "By using AWS Lambda, billing was ensured to only be charged for the use time of the bot to optimize cost-efficiency.",
+                    "Utilized DynamoDB as the backend database to store and manage user information and attendance codes.",
+                    "Designed and implemented validation mechanisms to prevent the reuse of codes and enforce expiration politicies."
+                ],
+                "img": "attendance.png", 
+                "repo": "https://github.com/UMLCloudComputing/attendance"
+            },
+            "1" : {
                 "name": "Gup Rankings",
                 "text": [
                     "Developed a Risk of Rain 2 mod that adds an In-Game Leaderboard system to the game to allow players to know how they are doing and add a competitive aspect to runs.",
-                    "Synced the host and the clients to display the information about players statistics to allow for comparison in real time.",
-                    "Published the mod on the Thunderstore to allow other players to easily access it and used Github Actions to help automate releases.",
-                    "Risk of Rain 2 was developed in Unity so the mode was developed in C#."
+                    "Synced the host and the clients to display the information about players statistics to allow for comparison in real time and consistent display.",
+                    "Published the mod on the Thunderstore to allow other players to easily access it and used Github Actions to help automate releases and build tasks.",
+                    "Risk of Rain 2 was developed in Unity so the mod was developed in C#.",
                 ],
                 "img": "guprankings.png", 
                 "repo": "https://github.com/cjcocokrisp/GupRankings"
             },
-            "1" : {
+            "2" : {
                 "name": "Portfolio Website",
                 "text": [
                     "Developed a portfolio website to host information about myself and career.",

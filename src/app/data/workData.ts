@@ -5,10 +5,9 @@ const workData = {
         "company_name": "PeARL Lab, 2022 - Present",
         "title": "Undergraduate Research Assistant",
         "text": [
-                 "Working on the M3X Project to develop an adaptive controller that automatically tunes parameters for the Myomo MyoPro Exoskeleton.",
-                 "Designed a Fuzzy Logic Controller to tune the device’s control parameters.",
-                 "Developed Python code to collect data and interact with the MyoPro device through serial and bluetooth connection.",
-                 "Worked with a National Instruments Data Acquisition Device and electronics to develop an attachment to detect if the device is fighting with the user through feedback from a pressure sensor."
+                 "Contributed to the development of an adaptive controller for an exeskeleton arm, enchancing device performance by 50%-80% across various movement tasks.",
+                 "Designed and implemented algorithms that use fuzzy logic to dynamically adjust control parameters improving the responsiveness and adaptability of the exoskeleton arm.",
+                 "Developed and optimized code for seamless interaction between the exoskeleton arm and the operating computer, ensuring precise and reliable operation and data streaming.",
         ],
         "imgs": [
             ["pearl.png", 518, 128, "PeARL Lab Logo"],
