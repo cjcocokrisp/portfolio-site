@@ -116,7 +116,7 @@ export default function Projects(props: any) {
                             width={imgSize[0]}
                             height={imgSize[1]}
                             alt={props.data[yearPos]["projects"][projectPos]["name"] + " Image"}
-                            style={{height: "auto"}}
+                            style={{height: "auto", alignSelf: "center"}}
                         />
                     </div>
                 </div>

@@ -46,7 +46,7 @@ const NavBar = (props: any) => {
                     <p style={{color: "white"}}><b style={{color: determineColor(isAlt)}}>03.</b> <a href="/#projects">Projects</a></p>
                     <p style={{color: "white"}}><b style={{color: determineColor(isAlt)}}>04.</b> <a href="/blog">Blog</a></p>
                     <p style={{color: "white"}}><b style={{color: determineColor(isAlt)}}>05.</b> <a href="/#blog-contact">Contact</a></p>
-                    <a href="https://docs.google.com/document/d/1NbT8MPtP4ctcOCSRfwJvO04UG6D37jDdsIf_sSDg7fE/edit?usp=sharing"><button style={{border: `1px solid ${determineColor(isAlt)}`}}className={`resume-button ${sourceCodePro.className}`}>Resume</button></a>
+                    <a href="/resume"><button style={{border: `1px solid ${determineColor(isAlt)}`}}className={`resume-button ${sourceCodePro.className}`}>Resume</button></a>
                 </div>
             )
         }

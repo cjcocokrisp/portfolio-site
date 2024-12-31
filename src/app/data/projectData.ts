@@ -3,17 +3,42 @@ const projectData = {
         "year": "2024",
         "projects": {
             "0" : {
+                "name": "Trivia Cloud",
+                "text": [
+                    "Developed a real time Trivia Game with AWS using AWS that interacts with the Open Trivia Database to pull questions from various categories. The entire application was developed to be serverless.",
+                    "Impleted a web socket API that handles managing game state and active connections. This API was built using AWS API Gateway and in the Go programming language.",
+                    "Stored game data, game states, and active connections using AWS Dynamodb.",
+                    "Built the front end of the application in React and stored the compiled app in an S3 bucket to serve to users.",
+                    "Automated deployments through GitHub actions to push latest version on every commit to the main branch.",
+                    "Developed for the COMP.4600 (Selected Topics: Cloud Computing) Fall 2024 Final Project."
+                ],
+                "img": "trivia-cloud.png", 
+                "repo": "https://github.com/cjcocokrisp/trivia-cloud"
+            },
+            "1" : {
+                "name": "Shiny Sim",
+                "text": [
+                    "Developed a Pokémon Shiny Hunting Simulator web application that utilizes PokéAPI to pull data and information.",
+                    "Used SQLite to store hunt information in a uniform fashion.",
+                    "Built the back end REST API in the Go programming language that interacts with the SQLite database.",
+                    "Containerized the application using Docker to make it easier to install the application to run locally."
+                ],
+                "img": "shiny-sim.png", 
+                "repo": "https://github.com/cjcocokrisp/shiny-sim"
+            },
+            "2" : {
                 "name": "Attendance Bot",
                 "text": [
                     "Developed a Discord Attendance Bot as an AWS Lambda function to be used by the UML Cloud Computing Club at their meetings to track and get statistics of their events.",
                     "By using AWS Lambda, billing was ensured to only be charged for the use time of the bot to optimize cost-efficiency.",
                     "Utilized DynamoDB as the backend database to store and manage user information and attendance codes.",
-                    "Designed and implemented validation mechanisms to prevent the reuse of codes and enforce expiration politicies."
+                    "Designed and implemented validation mechanisms to prevent the reuse of codes and enforce expiration politicies.",
+                    "Implemented a query system to pull statistics about attedance and send reports to requested Discord channel in CSV format."
                 ],
                 "img": "attendance.png", 
                 "repo": "https://github.com/UMLCloudComputing/attendance"
             },
-            "1" : {
+            "3" : {
                 "name": "Gup Rankings",
                 "text": [
                     "Developed a Risk of Rain 2 mod that adds an In-Game Leaderboard system to the game to allow players to know how they are doing and add a competitive aspect to runs.",
@@ -24,7 +49,7 @@ const projectData = {
                 "img": "guprankings.png", 
                 "repo": "https://github.com/cjcocokrisp/GupRankings"
             },
-            "2" : {
+            "4" : {
                 "name": "Portfolio Website",
                 "text": [
                     "Developed a portfolio website to host information about myself and career.",
