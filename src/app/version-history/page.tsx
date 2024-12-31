@@ -10,6 +10,16 @@ export default function VersionHistory() {
             <div className="container history-details" style={{minHeight: "86vh"}}>
                 <p className={`${sourceCodePro.className} history-title`}>Site Version History</p>
                 <div className={`${sourceCodePro.className} version-card`}>
+                    <p className="version-title">v1.2.0</p>
+                    <ul>
+                        <li>Added information about two projects completed in the Fall 2024 semester.</li>
+                        <li>Adjusted the size of the box in the projects section.</li>
+                        <li>Removed Instagram link in hero.</li>
+                        <li>Resume is now displayed in site on its own page through an iframe.</li>
+                        <li>Updated hero about text.</li>
+                    </ul>
+                </div>
+                <div className={`${sourceCodePro.className} version-card`}>
                     <p className="version-title">v1.1.4</p>
                     <ul>
                         <li>Added information about my Attendance Bot project to the site.</li>
