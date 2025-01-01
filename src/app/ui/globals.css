@@ -423,7 +423,7 @@ a:visited {
 
 .projects-box {
     height: 30rem;
-    width: 80rem;
+    width: 65rem;
     background: linear-gradient(var(--img-stroke), var(--title-red));
     border-radius: 0.625rem;
     display: flex;
@@ -755,6 +755,11 @@ a:visited {
     width: 45dvw;
 }
 
+.resume-iframe {
+    width: 50dvw;
+    height: 85dvh;
+}
+
 @media (max-width: 414px) {
     body {
         height: 125dvh;
@@ -949,6 +954,11 @@ a:visited {
 
     .blog-button {
         width: 30dvw;
+    }
+
+    .resume-iframe {
+        width: 100dvw;
+        height: 100dvh;
     }
 
 }
