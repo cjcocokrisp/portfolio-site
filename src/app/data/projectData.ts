@@ -1,5 +1,20 @@
 const projectData = {
     "0": {
+        "year": "2025",
+        "projects": {
+            "0" : {
+                "name": "go-dexcomshare",
+                "text": [
+                    "Developed a Go module to interact with the Dexcom Share API.",
+                    "Interacting with this API allows for users to pull real time estimated glucose values from their Dexcom CGM.",
+                    "Properly documented the module and uploaded it to the Go package manager to allow for easy installation.",
+                ],
+                "img": "dexcomshare.png", 
+                "repo": "https://github.com/cjcocokrisp/go-dexcomshare"
+            }
+        },
+    },
+    "1": {
         "year": "2024",
         "projects": {
             "0" : {
@@ -61,7 +76,7 @@ const projectData = {
             }
         }
     },
-    "1": {
+    "2": {
         "year": "2023",
         "projects": {
             "0" : {
@@ -86,7 +101,7 @@ const projectData = {
             }
         }
     },
-    "2": {
+    "3": {
         "year": "2022",
         "projects": {
             "0": {
@@ -110,7 +125,7 @@ const projectData = {
             }
         }
     },
-    "3": {
+    "4": {
         "year": "2021",
         "projects": {
             "0": {
