@@ -20,11 +20,11 @@ const projectData = {
             "0" : {
                 "name": "Trivia Cloud",
                 "text": [
-                    "Developed a real time Trivia Game with AWS using AWS that interacts with the Open Trivia Database to pull questions from various categories. The entire application was developed to be serverless.",
-                    "Impleted a web socket API that handles managing game state and active connections. This API was built using AWS API Gateway and in the Go programming language.",
-                    "Stored game data, game states, and active connections using AWS Dynamodb.",
+                    "Created a real-time Trivia Game with AWS interacts with the Open Trivia Database to pull questions from various categories. The entire application was designed to be serverless.",
+                    "Implemented a web socket API that handles managing game state and active connections built using AWS API Gateway and written in the Go programming language.",
+                    "Stored the game data and state along with active connections in AWS DynamoDB.",
                     "Built the front end of the application in React and stored the compiled app in an S3 bucket to serve to users.",
-                    "Automated deployments through GitHub actions to push latest version on every commit to the main branch.",
+                    "Automated deployments through GitHub actions to push the latest version on every commit to the main branch.",
                     "Developed for the COMP.4600 (Selected Topics: Cloud Computing) Fall 2024 Final Project."
                 ],
                 "img": "trivia-cloud.png", 

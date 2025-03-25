@@ -10,6 +10,13 @@ export default function VersionHistory() {
             <div className="container history-details" style={{minHeight: "86vh"}}>
                 <p className={`${sourceCodePro.className} history-title`}>Site Version History</p>
                 <div className={`${sourceCodePro.className} version-card`}>
+                    <p className="version-title">v1.2.3</p>
+                    <ul>
+                        <li>Revised Trivia Cloud bullet points.</li>
+                        <li>Add a more recent resume PDF and updated display to display it.</li>
+                    </ul>
+                </div>
+                <div className={`${sourceCodePro.className} version-card`}>
                     <p className="version-title">v1.2.2</p>
                     <ul>
                         <li>Add information about go-dexcomshare.</li>
