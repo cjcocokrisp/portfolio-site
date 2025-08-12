@@ -1,8 +1,26 @@
 const workData = {
     "0": {
+        "start_year": "2025",
+        "end_year": "2025",
+        "company_name": "Red Hat, 2025 - 2025",
+        "title": "Software Engineering Intern",
+        "text": [
+                 "Contributed to the OpenShift GitOps team, enhancing upstream open-source projects Argo CD and Argo CD Image Updater, continuous delivery tools for Kubernetes.",
+                 "Implemented webhook-based container image updates in Image Updater, reducing reliance on polling and lowering both application resource usage and container registry load.",
+                 "Designed and developed a new Argo CD CLI command to query live application resource data with filtering options, improving observability in CLI-only environments.",
+                 "Enhanced CI pipelines, release scripts, and documentation for Image Updater, improving maintainability and developer onboarding.",
+                 "Participated in testing and validation for GitOps Operator v1.17, ensuring release stability and quality.",
+                 "Collaborated with upstream community members and Red Hat engineers, presenting proposals in contributor meetings and iterating on designs from community feedback."
+        ],
+        "imgs": [
+            ["Red_Hat_logo.png", 2560, 1944, "Red Hat Logo"],
+        ],
+        "background_colors": ["#e6ddddff", "#ffffffff"]
+    },
+    "1": {
         "start_year": "2022",
-        "end_year": "Pres",
-        "company_name": "PeARL Lab, 2022 - Present",
+        "end_year": "2025",
+        "company_name": "PeARL Lab, 2022 - 2025",
         "title": "Undergraduate Research Assistant",
         "text": [
                  "Contributed to the development of an adaptive controller for an exeskeleton arm, enchancing device performance by 50%-80% across various movement tasks.",
@@ -15,7 +33,7 @@ const workData = {
         ],
         "background_colors": ["#2640a3", "#262E8C"]
     },
-    "1": {
+    "2": {
         "start_year": "2018",
         "end_year": "2022",
         "company_name": "City of Everett, 2018 - 2022",

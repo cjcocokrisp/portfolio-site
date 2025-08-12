@@ -10,27 +10,36 @@ export default function VersionHistory() {
             <div className="container history-details" style={{minHeight: "86vh"}}>
                 <p className={`${sourceCodePro.className} history-title`}>Site Version History</p>
                 <div className={`${sourceCodePro.className} version-card`}>
-                    <p className="version-title">v1.2.3</p>
+                    <p className="version-title">v1.3.0 - 08/12/25</p>
+                    <ul>
+                        <li>Site has been around for a year!</li>
+                        <li>Removed blog section from the site.</li>
+                        <li>Add projects for 2025 so far.</li>
+                        <li>In version history page add dates for release of each version.</li>
+                    </ul>
+                </div>
+                <div className={`${sourceCodePro.className} version-card`}>
+                    <p className="version-title">v1.2.3 - 03/25/25</p>
                     <ul>
                         <li>Revised Trivia Cloud bullet points.</li>
                         <li>Add a more recent resume PDF and updated display to display it.</li>
                     </ul>
                 </div>
                 <div className={`${sourceCodePro.className} version-card`}>
-                    <p className="version-title">v1.2.2</p>
+                    <p className="version-title">v1.2.2 - 01/20/25</p>
                     <ul>
                         <li>Add information about go-dexcomshare.</li>
                     </ul>
                 </div>
                 <div className={`${sourceCodePro.className} version-card`}>
-                    <p className="version-title">v1.2.1</p>
+                    <p className="version-title">v1.2.1 - 01/01/25</p>
                     <ul>
                         <li>Adjusted project box size to make it look better on smaller screens.</li>
                         <li>Adjusted Resume iframe for a better viewing experience on mobile.</li>
                     </ul>
                 </div>
                 <div className={`${sourceCodePro.className} version-card`}>
-                    <p className="version-title">v1.2.0</p>
+                    <p className="version-title">v1.2.0 - 12/30/24</p>
                     <ul>
                         <li>Added information about two projects completed in the Fall 2024 semester.</li>
                         <li>Adjusted the size of the box in the projects section.</li>
@@ -40,64 +49,64 @@ export default function VersionHistory() {
                     </ul>
                 </div>
                 <div className={`${sourceCodePro.className} version-card`}>
-                    <p className="version-title">v1.1.4</p>
+                    <p className="version-title">v1.1.4 - 08/24/24</p>
                     <ul>
                         <li>Added information about my Attendance Bot project to the site.</li>
                         <li>Update research work description.</li>
                     </ul>
                 </div>
                 <div className={`${sourceCodePro.className} version-card`}>
-                    <p className="version-title">v1.1.3</p>
+                    <p className="version-title">v1.1.3 - 08/17/24</p>
                     <ul>
                         <li>Added information about my Gup Rankings project to the site.</li>
                     </ul>
                 </div>
                 <div className={`${sourceCodePro.className} version-card`}>
-                    <p className="version-title">v1.1.2</p>
+                    <p className="version-title">v1.1.2 - 08/13/24</p>
                     <ul>
                         <li>Improve blog system on the site by shortening the URL of the articles.</li>
                     </ul>
                 </div>
                 <div className={`${sourceCodePro.className} version-card`}>
-                    <p className="version-title">v1.1.1</p>
+                    <p className="version-title">v1.1.1 - 07/10/24</p>
                     <ul>
                         <li>Improve experience on mobile be adjusting viewport values to dynamic.</li>
                     </ul>
                 </div>
                 <div className={`${sourceCodePro.className} version-card`}>
-                    <p className="version-title">v1.1.0</p>
+                    <p className="version-title">v1.1.0 - 07/09/24</p>
                     <ul>
                         <li>Add version information to the footer of the site.</li>
                         <li>Add a version history page that is accessible by clicking the version on footer.</li>
                     </ul>
                 </div>
                 <div className={`${sourceCodePro.className} version-card`}>
-                    <p className="version-title">v1.0.4</p>
+                    <p className="version-title">v1.0.4 - 07/09/24</p>
                     <ul>
                         <li>Fix typo on about section.</li>
                         <li>Update portfolio site image on projects section.</li>
                     </ul>
                 </div>
                 <div className={`${sourceCodePro.className} version-card`}>
-                    <p className="version-title">v1.0.3</p>
+                    <p className="version-title">v1.0.3 - 07/09/24</p>
                     <ul>
                         <li>Fix issues with RSS2JSON API URL.</li>
                     </ul>
                 </div>
                 <div className={`${sourceCodePro.className} version-card`}>
-                    <p className="version-title">v1.0.2</p>
+                    <p className="version-title">v1.0.2 - 07/09/24</p>
                     <ul>
                         <li>Update about photo to a more modern photo.</li>
                     </ul>
                 </div>
                 <div className={`${sourceCodePro.className} version-card`}>
-                    <p className="version-title">v1.0.1</p>
+                    <p className="version-title">v1.0.1 - 07/09/24</p>
                     <ul>
                         <li>Add API key to call for RSS2JSON for better updating.</li>
                     </ul>
                 </div>
                 <div className={`${sourceCodePro.className} version-card`}>
-                    <p className="version-title">v1.0.0</p>
+                    <p className="version-title">v1.0.0 - 07/09/24</p>
                     <ul>
                         <li>Inital site release!</li>
                         <li>Adds portfolio sections being about, experience, projects, blog, and contact.</li>

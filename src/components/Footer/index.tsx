@@ -24,11 +24,8 @@ export default function Footer(props: any) {
                 <a href="https://www.linkedin.com/in/christopher-coco-jr/">
                     <FontAwesomeIcon icon={faLinkedin} className="footer-icon"/>
                 </a>
-                <a href="https://www.instagram.com/cjcocokrisp/">
-                    <FontAwesomeIcon icon={faInstagram} className="footer-icon"/>
-                </a>
             </div>
-            <div className="footer-text">Christopher Coco Jr. | Copyright All Rights Reserved | <a href="/version-history">v1.2.3</a></div>
+            <div className="footer-text">Christopher Coco Jr. | Copyright All Rights Reserved | <a href="/version-history">v1.3.0</a></div>
         </div>
       );
 }

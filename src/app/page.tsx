@@ -50,7 +50,7 @@ export default function Home() {
                 <div className="hero-text" style={{alignSelf: "center"}}>
                     <p className={`${sourceCodePro.className} hero-text-name`}>Christopher Coco</p>
                     <p className={`${sourceCodePro.className} hero-text-title`}>Software Engineer</p>
-                    <p className={`${sourceSans.className} hero-text-info`}>I’m an aspiring software engineer based in Massachusetts that is currently studying Computer Science at the University of Massachusetts Lowell. I’m interested in cloud technology, backend development, large scale systems, distributed infrastructure, and networking.</p>
+                    <p className={`${sourceSans.className} hero-text-info`}>I’m an aspiring software engineer based in Massachusetts that is currently studying Computer Science at the University of Massachusetts Lowell. I’m interested in cloud native infrastructure, distributed infrastructure, and networking.</p>
                 </div>
                 <div className="hero-img-container" style={{alignSelf: "center"}}>
                     <Image
@@ -74,13 +74,6 @@ export default function Home() {
                 <Projects data={projectData}/>
             </div>
             <div className="container blog-contact" id="blog-contact">
-                <div id="blog">
-                    <div className={`${sourceSans.className} blog-title`}>Blog</div>
-                    <div className="blog-content">
-                        <div className={`${sourceSans.className} blog-text`}>If you’re interested in what I’m working on, learning, and more check out my blog!</div>
-                        <a href="/blog"><button className={`${sourceSans.className} blog-button`}>To Blog</button></a>
-                    </div>
-                </div>
                 <div id="contact">
                     <div className={`${sourceSans.className} contact-title`}>Contact</div>
                     <div className={`${sourceSans.className} contact-text`}>Want to get in touch?</div>
@@ -88,6 +81,7 @@ export default function Home() {
                         <div className={`contact-linkedin`}><a href="https://www.linkedin.com/in/christopher-coco-jr/">Connect with me on <FontAwesomeIcon icon={faLinkedin} className="contact-icon" /></a></div>
                         <div className="contact-email">Email me at <em>chriscoco1205@gmail.com</em></div>
                     </div>
+                    <div className={`${sourceSans.className} contact-text`}>More to the site coming eventually who knows when...</div>
                 </div>
             </div>
             <Footer/>

@@ -3,6 +3,19 @@ const projectData = {
         "year": "2025",
         "projects": {
             "0" : {
+                "name": "SongSwipe",
+                "text": [
+                    "Participated in development of a web application for Spotify Playlist cleaning inspired by dating apps.",
+                    "Developed in Typescript.",
+                    "Handled interactions with the Spotify API and designed system for data store.",
+                    "Added a metric server to the application to be able to record data on how this app improved experience. Created graphs from metrics.",
+                    "Created testing suite for the application.",
+                    "Developed for the COMP.4120 (Software Engineering II) Spring 2025 Project."
+                ],
+                "img": "songswipe.png", 
+                "repo": "https://github.com/ListenToAJ/SongSwipe"
+            },
+            "1" : {
                 "name": "go-dexcomshare",
                 "text": [
                     "Developed a Go module to interact with the Dexcom Share API.",
