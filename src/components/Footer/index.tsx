@@ -25,7 +25,7 @@ export default function Footer(props: any) {
                     <FontAwesomeIcon icon={faLinkedin} className="footer-icon"/>
                 </a>
             </div>
-            <div className="footer-text">Christopher Coco Jr. | Copyright All Rights Reserved | <a href="/version-history">v1.3.1</a></div>
+            <div className="footer-text">Christopher Coco Jr. | Copyright All Rights Reserved | <a href="/version-history">v1.3.2</a></div>
         </div>
       );
 }

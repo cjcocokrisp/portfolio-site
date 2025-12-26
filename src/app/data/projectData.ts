@@ -3,6 +3,33 @@ const projectData = {
         "year": "2025",
         "projects": {
             "0" : {
+                "name": "mc2sf",
+                "text": [
+                    "Developed a small tool in Python to backup a Minecraft Server to Seafile.",
+                    "Archives server as a zip file and then uses Seafile's REST API to uplaod the file.",
+                    "Created a Helm Chart to deploy the tool to Kubernetes as a cronjob.",
+                    "Tried out uv as the Python package manager for this project, it is pretty neat."
+                ],
+                "img": "mc2sf.png", 
+                "repo": "https://github.com/cjcocokrisp/mc2sf"
+
+            },
+            "1" : {
+                "name": "Homelab",
+                "text": [
+                    "Created a homelab to self host various services.",
+                    "Created a Fedora bootc image for the operating system of the devices in my homelab.",
+                    "Used Terraform to deploy VMs of Talos Linux to act as nodes in a Kubernetes cluster.",
+                    "Wrote Kubernetes manifests to deploy various applications.",
+                    "Set up local DNS with Unbound.",
+                    "For outside access to the whole network set up Tailscale as a VPN.",
+                    "Exposed services to the public internet with Cloudflare tunnels.",
+                    "Created documentation for some aspects of the homelab."
+                ],
+                "img": "homelab.png", 
+                "repo": "https://github.com/cjcocokrisp/homelab"
+            },
+            "2" : {
                 "name": "SongSwipe",
                 "text": [
                     "Participated in development of a web application for Spotify Playlist cleaning inspired by dating apps.",
@@ -15,7 +42,7 @@ const projectData = {
                 "img": "songswipe.png", 
                 "repo": "https://github.com/ListenToAJ/SongSwipe"
             },
-            "1" : {
+            "3" : {
                 "name": "go-dexcomshare",
                 "text": [
                     "Developed a Go module to interact with the Dexcom Share API.",
