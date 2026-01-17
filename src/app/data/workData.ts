@@ -1,5 +1,19 @@
 const workData = {
     "0": {
+        "start_year": "2026",
+        "end_year": "2026",
+        "company_name": "Red Hat, 2026 - Present",
+        "title": "Associate Software Engineer",
+        "text": [
+                  "Returned to the OpenShift GitOps team.",
+                  "More notes will be added once I do some cool stuff."
+        ],
+        "imgs": [
+            ["Red_Hat_logo.png", 2560, 1944, "Red Hat Logo"],
+        ],
+        "background_colors": ["#e6ddddff", "#ffffffff"]
+    },
+    "1": {
         "start_year": "2025",
         "end_year": "2025",
         "company_name": "Red Hat, 2025 - 2025",
@@ -17,7 +31,7 @@ const workData = {
         ],
         "background_colors": ["#e6ddddff", "#ffffffff"]
     },
-    "1": {
+    "2": {
         "start_year": "2022",
         "end_year": "2025",
         "company_name": "PeARL Lab, 2022 - 2025",
@@ -33,7 +47,7 @@ const workData = {
         ],
         "background_colors": ["#2640a3", "#262E8C"]
     },
-    "2": {
+    "3": {
         "start_year": "2018",
         "end_year": "2022",
         "company_name": "City of Everett, 2018 - 2022",
